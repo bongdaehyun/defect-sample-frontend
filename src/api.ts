@@ -7,6 +7,11 @@ export type Post = {
   updatedAt: string
 }
 
+export type Notice = {
+  title: string
+  url: string
+}
+
 export type PostInput = Pick<Post, 'title' | 'content'>
 
 export const users = ['tester1', 'tester2', 'dev1']
@@ -38,4 +43,5 @@ export const api = {
   update: (id: number, input: PostInput) =>
     request<Post>(`/posts/${id}`, { method: 'PUT', body: JSON.stringify(input) }),
   remove: (id: number) => request<void>(`/posts/${id}`, { method: 'DELETE' }),
+  notices: () => request<Notice[]>('/notices'),
 }

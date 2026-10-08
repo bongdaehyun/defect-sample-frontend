@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { api, type Post } from './api'
 import { formatDate } from './format'
+import NoticeBanner from './NoticeBanner'
 
 type Props = {
   onOpen: (id: number) => void
@@ -24,6 +25,7 @@ export default function PostList({ onOpen, onWrite }: Props) {
 
   return (
     <section>
+      <NoticeBanner />
       <form className="search" onSubmit={search}>
         <input placeholder="제목" value={keyword} onChange={(e) => setKeyword(e.target.value)} />
         <input type="date" aria-label="작성일 시작" value={from} onChange={(e) => setFrom(e.target.value)} />

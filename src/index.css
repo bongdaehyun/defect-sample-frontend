@@ -58,3 +58,10 @@ textarea {
   color: #0b57d0;
   cursor: pointer;
 }
+
+.notice {
+  margin: 16px 0 0;
+  padding: 8px 12px;
+  background: #f4f6fa;
+  list-style: none;
+}
