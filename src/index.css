@@ -40,6 +40,18 @@ form.edit {
   gap: 8px;
 }
 
+.meta {
+  color: #666;
+  font-size: 14px;
+}
+
+.content {
+  min-height: 160px;
+  padding: 16px 0;
+  border-top: 1px solid #ddd;
+  line-height: 1.6;
+}
+
 textarea {
   min-height: 240px;
 }

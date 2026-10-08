@@ -25,10 +25,10 @@ export default function PostDetail({ id, onEdit, onBack }: Props) {
   return (
     <article>
       <h2>{post.title}</h2>
-      <p>
+      <p className="meta">
         {post.author} · {formatDate(post.createdAt)}
       </p>
-      <div style={{ whiteSpace: 'pre-wrap' }}>{post.content}</div>
+      <div className="content">{post.content}</div>
       <div className="buttons">
         <button onClick={() => onEdit(post)}>수정</button>
         <button onClick={remove}>삭제</button>
